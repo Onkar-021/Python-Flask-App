@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Identify Mood of person using voice</title>
+        <title>ML API</title>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        
+        
+    </head>
+
+    <body>
+    
+     <div class="login">
+    	<h1>Identifying Mood of person using Voice</h1>
+        
+        <br><br>
+        <form method="post" action="{{ url_for('predict')}}" enctype="multipart/form-data">
+           
+            <label>Audio File: </label>
+            <input type="file" name="file"/>
+            <br>
+            <input value="Upload" type="submit">
+          </form>
+      <br><br>
+          <p class="text-center">  {{prediction}}</p>
+    
+    </div>
+        </body>
+</html>
