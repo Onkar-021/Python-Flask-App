@@ -1,0 +1,6 @@
+---
+applications:
+  - name: Python Flask App
+    random-route: true
+    memory: 100M
+    disk_quota: 250M
